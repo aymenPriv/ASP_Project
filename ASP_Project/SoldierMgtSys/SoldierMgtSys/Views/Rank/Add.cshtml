@@ -1,0 +1,15 @@
+@model SoldierMgtSys.Models.AddRankViewModel;
+
+@{
+    Layout = "_AdminLayout";
+}
+<form method="post" action="Add">
+
+
+    <div class="mb-3">
+        <label for="" class="form-label">Rank Name: </label>
+        <input type="text" class="form-control" asp-for="RankName">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

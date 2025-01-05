@@ -1,0 +1,33 @@
+@model SoldierMgtSys.Models.UpdateSoldierViewModel;
+@{
+    Layout = "_AdminLayout";
+}
+<form method="post" action="Edit">
+    <div class="mb-3">
+        <label for="" class="form-label">Soldier ID: </label>
+        <input type="text" class="form-control" asp-for="SoldierId" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">First Name: </label>
+        <input type="text" class="form-control" asp-for="FirstName">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Last Name: </label>
+        <input type="text" class="form-control" asp-for="LastName">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Date of Birth: </label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Date of Enlistment: </label>
+        <input type="date" class="form-control" asp-for="DateOfEnlistment">
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-danger" asp-controller="Soldier" asp-action="Delete">Delete</button>
+</form>

@@ -1,0 +1,41 @@
+@model List<SoldierMgtSys.Models.Assignment>
+
+@{
+    Layout = "_AdminLayout";
+}
+<h2> Assignment Details: </h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Assignment ID
+        </th>
+        <th>
+            Asssignment Details
+        </th>
+        <th>
+            Start Date
+        </th>
+        <th>
+            End Date
+        </th>
+        <th>
+            Soldier ID
+        </th>
+        
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var assignments in Model)
+    {
+        <tr>
+            <td>@assignments.AssignmentId</td>
+            <td>@assignments.AssignmentDetails</td>
+            <td>@assignments.StartDate.ToString("dd-MM-yyyy")</td>
+            <td>@assignments.EndDate.ToString("dd-MM-yyyy")</td>
+            <td>@assignments.SoldierId</td>
+        </tr>
+    }
+    </tbody>
+</table>

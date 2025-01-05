@@ -1,0 +1,34 @@
+@model List<SoldierMgtSys.Models.Unit>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2> Unit Details: </h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Unit ID
+        </th>
+        <th>
+            Unit Name
+        </th>
+        <th>
+            Location
+        </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var units in Model)
+    {
+    <tr>
+        <td>@units.UnitId</td>
+        <td>@units.UnitName</td>
+        <td>@units.Location</td>
+    </tr>
+    }
+    </tbody>
+</table>

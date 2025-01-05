@@ -1,0 +1,28 @@
+@model List<SoldierMgtSys.Models.Rank>
+
+@{
+    Layout = "_AdminLayout";
+}
+<h2> Rank Details: </h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Rank ID
+        </th>
+        <th>
+            Rank Name
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var ranks in Model)
+    {
+        <tr>
+            <td>@ranks.RankId</td>
+            <td>@ranks.RankName</td>
+        </tr>
+    }
+    </tbody>
+</table>

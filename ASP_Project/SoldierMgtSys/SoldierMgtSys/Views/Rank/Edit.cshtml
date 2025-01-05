@@ -1,0 +1,17 @@
+@model SoldierMgtSys.Models.UpdateRankViewModel;
+@{
+    Layout = "_AdminLayout";
+}
+<form asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label for="" class="form-label">Rank ID: </label>
+        <input type="text" class="form-control" asp-for="RankId" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Rank Name: </label>
+        <input type="text" class="form-control" asp-for="RankName">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-danger" asp-controller="Rank" asp-action="Delete">Delete</button>
+</form>

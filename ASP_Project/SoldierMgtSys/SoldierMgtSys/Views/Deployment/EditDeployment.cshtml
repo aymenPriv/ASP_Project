@@ -1,0 +1,26 @@
+@model SoldierMgtSys.Models.UpdateDeploymentViewModel;
+@{
+    Layout = "_AdminLayout";
+}
+<form asp-action="EditDeployment" method="post">
+    <div class="mb-3">
+        <label for="" class="form-label">Deployment ID: </label>
+        <input type="text" class="form-control" asp-for="DeploymentId" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Deployment Location: </label>
+        <input type="text" class="form-control" asp-for="DeploymentLocation">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Deployment Start Date: </label>
+        <input type="date" class="form-control" asp-for="DeploymentStartDate">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Deployment End Date: </label>
+        <input type="date" class="form-control" asp-for="DeploymentEndDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-danger" asp-controller="Deployment" asp-action="DeleteDeployment">Delete</button>
+</form>

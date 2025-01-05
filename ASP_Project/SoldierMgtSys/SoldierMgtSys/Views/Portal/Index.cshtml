@@ -1,0 +1,55 @@
+
+@model List<SoldierMgtSys.Models.Soldier>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2> Soldier Details: </h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Soldier ID
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Date of Birth
+        </th>
+
+        <th>
+            Rank ID
+        </th>
+
+        <th>
+            Unit ID
+        </th>
+
+
+        <th>
+            Date of Enlistment
+        </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var soldiers in Model)
+    {
+        <tr>
+            <td>@soldiers.SoldierId</td>
+            <td>@soldiers.FirstName</td>
+            <td>@soldiers.LastName</td>
+            <td>@soldiers.DateOfBirth.ToString("dd-MM-yyyy")</td>
+            <td>@soldiers.RankId</td>
+            <td>@soldiers.UnitId</td>
+            <td>@soldiers.DateOfEnlistment.ToString("dd-MM-yyyy")</td>
+        </tr>
+    }
+    </tbody>
+    </table>

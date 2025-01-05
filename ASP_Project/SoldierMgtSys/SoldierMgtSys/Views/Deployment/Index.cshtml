@@ -1,0 +1,41 @@
+@model List<SoldierMgtSys.Models.Deployment>
+
+@{
+    Layout = "_AdminLayout";
+}
+<h2> Deployment Details: </h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Deployment ID
+        </th>
+        <th>
+            Deployment Location
+        </th>
+        <th>
+            Start Date
+        </th>
+        <th>
+            End Date
+        </th>
+        <th>
+            Soldier ID
+        </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var deployments in Model)
+    {
+    <tr>
+        <td>@deployments.DeploymentId</td>
+        <td>@deployments.DeploymentLocation</td>
+        <td>@deployments.DeploymentStartDate.ToString("dd-MM-yyyy")</td>
+        <td>@deployments.DeploymentEndDate.ToString("dd-MM-yyyy")</td>
+        <td>@deployments.SoldierId</td>
+    </tr>
+    }
+    </tbody>
+</table>

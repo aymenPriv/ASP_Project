@@ -1,0 +1,16 @@
+@model SoldierMgtSys.Models.UpdateUnitViewModel;
+@{
+    Layout = "_AdminLayout";
+}
+<form asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label for="" class="form-label">Unit ID: </label>
+        <input type="text" class="form-control" asp-for="UnitId" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Unit Name: </label>
+        <input type="text" class="form-control" asp-for="UnitName">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-danger" asp-controller="Unit" asp-action="Delete">Delete</button>
+</form>
